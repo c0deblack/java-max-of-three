@@ -51,6 +51,12 @@ public class MaxOfThree {
         return set[1];
     }
 
+    private static int findSecondMax(int a, int b, int c) {
+        int max = Math.max(Math.max(a, b), c);
+        int min = Math.min(Math.min(a, b), c);
+        return a + b + c - max - min;
+    }
+
     public static int[][] getInput(){
         Scanner sc = new Scanner(System.in);
 
